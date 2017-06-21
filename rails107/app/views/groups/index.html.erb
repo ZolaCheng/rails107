@@ -13,7 +13,7 @@
     </thead>
     <tbody>
 
-      <% @group.each do |group| %>
+      <!-- <% @group.each do |group| %>
         <tr>
           <td>#</td>
           <td><%= link_to(group.title, group_path(group)) %></td>
@@ -27,9 +27,9 @@
             <% end %>
           </td>
         </tr>
-      <% end %>
+      <% end %> -->
 
-      <!-- <%= render :partial => "group_item", :collection => @groups, :as => :group %> -->
+    <%= render :partial => "group_item", :collection => @group, :as => :group %>
 
     </tbody>
   </table>
