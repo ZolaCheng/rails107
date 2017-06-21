@@ -12,11 +12,12 @@
       </tr>
     </thead>
     <tbody>
+
       <% @group.each do |group| %>
         <tr>
           <td>#</td>
           <td><%= link_to(group.title, group_path(group)) %></td>
-          <td><%= render_group_descripation(group) %></td>
+          <td><%= render_group_description(group) %></td>
           <td><%= group.user.email %></td>
           <td>
             <% if current_user && current_user == group.user %>
@@ -27,6 +28,9 @@
           </td>
         </tr>
       <% end %>
+
+      <!-- <%= render :partial => "group_item", :collection => @groups, :as => :group %> -->
+
     </tbody>
   </table>
 </div>
